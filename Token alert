@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Token Alert</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+/* Main Container */
+.container{
+    text-align:center;
+}
+
+/* Notification Alert Box */
+.alert-box{
+    background:#1b263b;
+    padding:40px 60px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.6);
+    animation:popup 1s ease-out;
+}
+
+/* Animation */
+@keyframes popup{
+    0%{transform:scale(0.5); opacity:0;}
+    100%{transform:scale(1); opacity:1;}
+}
+
+.alert-title{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#00d4ff;
+    letter-spacing:1px;
+}
+
+.token-number{
+    font-size:80px;
+    font-weight:bold;
+    color:#00ff88;
+    margin:20px 0;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0.6;}
+}
+
+.room-info{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.message{
+    font-size:18px;
+    color:#ffd60a;
+}
+
+/* Decorative Bell Icon */
+.bell{
+    font-size:50px;
+    margin-bottom:15px;
+    animation:ring 1s infinite;
+}
+
+@keyframes ring{
+    0%{transform:rotate(0);}
+    25%{transform:rotate(15deg);}
+    50%{transform:rotate(-15deg);}
+    75%{transform:rotate(10deg);}
+    100%{transform:rotate(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="alert-box">
+        <div class="bell">🔔</div>
+        <div class="alert-title">Token Called!</div>
+        <div class="token-number">A-107</div>
+        <div class="room-info">Please proceed to Room 4</div>
+        <div class="message">Dr. Mehta is ready to see you.</div>
+    </div>
+</div>
+
+</body>
+</html>
